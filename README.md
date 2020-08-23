@@ -1,4 +1,4 @@
-# nagptodolist
+# Todolist
 
 ## Project setup
 ```
