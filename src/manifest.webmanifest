@@ -1,0 +1,17 @@
+{
+    "short_name": "NAGPToDo",
+    "name": "NAGP To Do list",
+    "icons": [
+      {
+        "src": "/assets/images/ToDo192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/assets/images/ToDo512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "."
+  }

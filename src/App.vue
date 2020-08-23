@@ -1,28 +1,30 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <div class="container">
+      <Header></Header>
+      <List :toDoList="toDoList"></List>
+      <AddToDoItem :toDoList="toDoList"></AddToDoItem>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Header from "./components/Header";
+import List from "./components/List";
+import AddToDoItem from "./components/AddToDoItem";
 
 export default {
   name: "App",
   components: {
-    HelloWorld
+    Header,
+    List,
+    AddToDoItem
+  },
+  data() {
+    const data = localStorage.getItem("TODO");
+    return {
+      toDoList: data ? JSON.parse(data) : []
+    };
   }
 };
 </script>
-
-<style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
